@@ -1,4 +1,4 @@
-import 'package:cli/cli.dart';
+import 'package:intro/lib.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -6,5 +6,3 @@ void main() {
     expect(calculate(), 42);
   });
 }
-
-
