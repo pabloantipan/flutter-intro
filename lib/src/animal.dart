@@ -6,12 +6,12 @@ abstract class Animal {
 }
 
 abstract class Flyer {
-  Double maxAltitud = 0.0;
+  double maxAltitud = 0.0;
   String fly() => "I can fly!!";
 }
 
 abstract class Swimmer {
-  Double maxDeph = 0.0;
+  double maxDeph = 0.0;
   String swim() => "I can swim!!";
 }
 
