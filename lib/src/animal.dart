@@ -1,24 +1,25 @@
 // Practicing mixing
-abstract class Animal {
-  int legs = 0;
+import 'dart:ffi';
 
-  void emitSound();
+abstract class Animal {
+  dynamic emitSound();
 }
+
 abstract class Flyer {
-  void fly() => print("I can fly!!")
+  Double maxAltitud = 0.0;
+  String fly() => "I can fly!!";
 }
 
 abstract class Swimmer {
-  void swim() => print("I can swim!!")
+  Double maxDeph = 0.0;
+  String swim() => "I can swim!!";
 }
 
 abstract class Walker {
-  void walk() => print("I can walk!!")
+  String walk() => "I can walk!!";
 }
 
-abstract class Mammal extends Animal {
-
-}
+abstract class Mammal extends Animal {}
 
 abstract class Bird extends Animal {
   int _numWings = 2;
@@ -37,15 +38,19 @@ class Dog implements Mammal {
   int legs = 4;
   int tails = 1;
 
-  void emitSound() => print('Waraf!!');
+  @override
+  String emitSound() => 'Waraf!!';
 }
 
 class Cat implements Mammal {
   int legs = 4;
   int tails = 1;
 
-  void emitSound() => print('Mew!!');
+  @override
+  emitSound() => ['Mew!!', 'Miuu!!'];
 }
 
 class Duck extends Bird with Flyer, Swimmer {
+  @override
+  String emitSound() => 'Cuac!!';
 }
