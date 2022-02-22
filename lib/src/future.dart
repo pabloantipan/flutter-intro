@@ -1,10 +1,9 @@
 // Future basic
-void main() {
+void main() async {
   print('We\'re just for asking ...');
 
-  httpGet('https://api.nothing.com/aliens').then((data) {
-    print(data);
-  });
+  String data = await httpGet('https://api.nothing.com/aliens');
+  print(data);
 
   print('Last line');
 }
